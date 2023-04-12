@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* Fuentes */
+    --font-lexend-deca: 'Lexend Deca', sans-serif;
+    --font-big-shoulders-display: 'Big Shoulders Display', cursive;
+
+    /* Colores */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.5rem;
+}
+
+@media (min-width:768px){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 95vh;
+    }
+}
+
+.contenedor{
+    width: 90%;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+@media (min-width:768px){
+    .contenedor{
+        width: 60%;
+    }
+}
+
+@media (min-width:768px){
+    .cards__grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+.card{
+    padding: 3rem;
+}
+
+@media (min-width:768px){
+    .card{
+        padding: 6rem;
+    }
+}
+
+.card:nth-child(1){
+    background-color: var(--bright-orange);
+}
+
+.card:nth-child(2){
+    background-color: var(--dark-cyan);
+}
+
+.card:nth-child(3){
+    background-color: var(--very-dark-cyan);
+}
+
+.card__titulo{
+    color: var(--very-light-gray);
+    font-family: var(--font-big-shoulders-display);
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+@media (min-width:768px){
+    .card__titulo{
+        font-size: 4rem;
+    }
+}
+
+.card__descripcion{
+    font-family: var(--font-lexend-deca);
+    color: var(--transparent-white);
+    line-height: 1.5;
+    font-size: 1.7rem;
+}
+
+@media (min-width:768px){
+    .card__descripcion{
+        margin-bottom: 8rem;
+        font-size: 1.9rem;
+    }
+}
+
+/* Enlaces */
+
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    background-color: var(--very-light-gray);
+    border-radius: 3rem;
+    border: 1px solid var(--very-light-gray);
+    font-size: 1.7rem;
+    font-family: var(--font-lexend-deca);
+    transition: background-color .3s;
+}
+
+.btn:hover{
+    cursor: pointer;
+    color: var(--very-light-gray);
+}
+
+.btn__sedans{
+    color: var(--bright-orange);
+}
+
+.btn__sedans:hover{
+    background-color: var(--bright-orange);
+}
+
+.btn__suvs{
+    color: var(--dark-cyan);
+}
+
+.btn__suvs:hover{
+    background-color: var(--dark-cyan);
+}
+
+.btn__luxury{
+    color: var(--very-dark-cyan);
+}
+
+.btn__luxury:hover{
+    background-color: var(--very-dark-cyan);
+}
